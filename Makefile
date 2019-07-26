@@ -10,7 +10,7 @@ clean:
 	rm -f copy.o
 	rm -f copy
 
-.PHONY : clean
-.PHONY : copy.o
+.PHONY: clean
+.PHONY: copy.o
 
 
