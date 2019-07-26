@@ -20,6 +20,9 @@ int main(int argc, char* argv[]){
 		else{
 			int fd_read = 0, fd_write;
 			char* buf = malloc(FILE_SIZE); // 4KB Buffer
+
+			if(buf == NULL) { perror("Failed to make buffer!!"); exit(0); }
+
 			while(fd_read = read(fd_src, buf, FILE_SIZE)){
 				if(fd_write = write(fd_dest, buf, fd_read)) continue;
 				else{
